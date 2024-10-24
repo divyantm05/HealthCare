@@ -51,7 +51,15 @@ public class LoginActivity extends AppCompatActivity {
             }else if(password.isEmpty()){
                 password_et.setError("Please enter password");
             }else{
-                Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
+                DataBase db=new DataBase(this,"healthcare",null,1);
+                boolean auth=db.login(username,password);
+                if(auth) {
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                }else{
+                   password_et.setError("invalid credentials");
+                   password_et.setText("");
+                   password_et.requestFocus();
+                }
             }
         });
 

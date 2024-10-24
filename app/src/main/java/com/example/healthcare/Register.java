@@ -45,7 +45,7 @@ public class Register extends AppCompatActivity {
         to_login=findViewById(R.id.to_login);
 
 
-        //register button on click listener
+        //register button on clck listner
         register_button.setOnClickListener(v->{
             String email=email_et.getText().toString().trim();
             String password=password_et.getText().toString().trim();
@@ -77,9 +77,7 @@ public class Register extends AppCompatActivity {
                 confirm_password_et.setText("");
                 confirm_password_et.requestFocus();
             }else{
-                Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(this,LoginActivity.class);
-                startActivity(i);
+                regiterUser(username,email,password);
             }
 
         });
@@ -92,7 +90,6 @@ public class Register extends AppCompatActivity {
 
     }
 
-    //password validation
     public static boolean isValid(String password) {
         if (password.length() < 8) {
             return false;
@@ -119,7 +116,6 @@ public class Register extends AppCompatActivity {
         return false;
     }
 
-//    display snackbar
     public void showSnackBar(View v,String msg){
         Snackbar.make(v,msg, Snackbar.LENGTH_LONG)
                 .setAction("ok",view -> {
@@ -129,4 +125,20 @@ public class Register extends AppCompatActivity {
                 })
                 .show();
     }
+    public void regiterUser(String username,String email,String password){
+        DataBase db=new DataBase(this,"healthcare",null,1);
+
+        String auth=db.register(username,email,password);
+        if(auth.equals("already registered")){
+            username_et.setError("user already exits");
+            username_et.requestFocus();
+        }else if(auth.equals("failed")){
+            Toast.makeText(getApplicationContext(),"registration failed",Toast.LENGTH_SHORT).show();
+        }else{
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+        }
+
+    }
+
 }
