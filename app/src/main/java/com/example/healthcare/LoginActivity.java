@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        
+
         to_register.setOnClickListener(v->{
             Intent i=new Intent(this,Register.class);
             startActivity(i);
