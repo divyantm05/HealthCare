@@ -77,6 +77,7 @@ public class Register extends AppCompatActivity {
                 confirm_password_et.setText("");
                 confirm_password_et.requestFocus();
             }else{
+                Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(this,LoginActivity.class);
                 startActivity(i);
             }
