@@ -92,6 +92,7 @@ public class Register extends AppCompatActivity {
 
     }
 
+    //password validation
     public static boolean isValid(String password) {
         if (password.length() < 8) {
             return false;
@@ -118,6 +119,7 @@ public class Register extends AppCompatActivity {
         return false;
     }
 
+//    display snackbar
     public void showSnackBar(View v,String msg){
         Snackbar.make(v,msg, Snackbar.LENGTH_LONG)
                 .setAction("ok",view -> {
