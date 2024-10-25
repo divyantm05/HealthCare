@@ -30,14 +30,14 @@
         android:layout_marginBottom="10dp"
         android:textColor="@color/slate"
         android:fontFamily="@font/roboto_bold"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:gravity="center"
-        android:textFontWeight="800"
+        android:textStyle="bold"
         />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="0dp"
         >
         <GridLayout
             android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/physicians_card"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="10dp"
@@ -79,7 +79,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/dietician_card"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="10dp"
@@ -110,7 +110,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/surgeon_card"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="10dp"
@@ -140,7 +140,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardiologists_card"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="10dp"
@@ -171,7 +171,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/dentist_card"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="10dp"
                 android:layout_margin="20dp"
@@ -202,7 +202,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/back_card"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="10dp"
